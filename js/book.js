@@ -69,7 +69,6 @@ function updateText() {
 
 
 const soldoutPrice = document.getElementById('soldout-price');
-const discountInput = document.getElementById('discount-input')
 
 // soldOut Coust function 
 function soldOutPrice() {
@@ -81,10 +80,26 @@ function soldOutPrice() {
     const grandTotal = macPrice + memory + ssd + delivary;
     soldoutPrice.innerText = grandTotal;
 
- 
+ return soldoutPrice.innerText;
 }
 
+// discount Input 
+const discountInput = document.getElementById('discount-input');
+let totalDiscount = document.getElementById('soldout-price');
 
 
 
+document.getElementById('apply-btn').addEventListener('click',function (){
+    
+    if(discountInput.value.toLowerCase() == 'stevekaku'){
+       let discount = totalDiscount.innerText * (20/100);
+       let discountTotal = document.getElementById('total-discount');
+       discountTotal.innerText = discount;
 
+       let finnel = totalDiscount.innerText -discount
+       totalDiscount.innerText = finnel;
+    }
+    
+    discountInput.value = ''
+  
+})
