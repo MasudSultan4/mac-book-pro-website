@@ -1,25 +1,36 @@
-// count memory 
-const countMemorey = document.getElementById('const-memory');
 
-
-// paid memory 
-document.getElementById('paid-memory').addEventListener('click',function(){
-    countMemorey.innerText = '180'
-    updateText();
-})
+// free count product 
+function freeCountProduct(free,freeProductId,price) {
+    const freeProduct = document.getElementById(free);
+    document.getElementById(freeProductId).addEventListener('click',function(){
+        freeProduct.innerText = price
+        updateText();
+         
+    })
+}
 
 // free memory 
-document.getElementById('free-memory').addEventListener('click',function(){
-    countMemorey.innerText = '0'
-    updateText();
-})
+freeCountProduct('const-memory','free-memory',0);
+
+// free delivary 
+freeCountProduct('count-delivary','free-delivary',0);
+
+// free SSD 
+freeCountProduct('count-ssd','free-ssd',0)
+
 
 // count ssd 1tb
 const countSsd = document.getElementById('count-ssd')
 
-// free SSD 
-document.getElementById('free-ssd').addEventListener('click',function(){
-    countSsd.innerText = '0';
+
+
+
+// count memory 
+const countMemorey = document.getElementById('const-memory');
+
+// paid memory 
+document.getElementById('paid-memory').addEventListener('click',function(){
+    countMemorey.innerText = '180'
     updateText();
 })
 
@@ -35,19 +46,14 @@ document.getElementById('paid-1tb').addEventListener('click',function(){
     updateText();
 })
 
-
 // count Delivary 
 const countDelivary = document.getElementById('count-delivary');
-
-document.getElementById('free-delivary').addEventListener('click',function(){
-    countDelivary.innerText = '0';
-    updateText();
-});
 
 document.getElementById('paid-delivary').addEventListener('click',function(){
     countDelivary.innerText = '20'
     updateText();
 })
+
 // product Price
 const productPrice = document.getElementById('product-price');
 // total price 
@@ -83,21 +89,23 @@ function soldOutPrice() {
  return soldoutPrice.innerText;
 }
 
+
+
 // discount Input 
 const discountInput = document.getElementById('discount-input');
-let totalDiscount = document.getElementById('soldout-price');
+let finullTotal = document.getElementById('soldout-price');
 
 
 
 document.getElementById('apply-btn').addEventListener('click',function (){
     
     if(discountInput.value.toLowerCase() == 'stevekaku'){
-       let discount = totalDiscount.innerText * (20/100);
+       let discount = finullTotal.innerText * (20/100);
        let discountTotal = document.getElementById('total-discount');
        discountTotal.innerText = discount;
 
-       let finnel = totalDiscount.innerText -discount
-       totalDiscount.innerText = finnel;
+       let finnel = finullTotal.innerText -discount
+       finullTotal.innerText = finnel;
     }
     
     discountInput.value = ''

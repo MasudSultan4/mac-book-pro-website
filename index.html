@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mac-Book</title>
+    <!-- css link  -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- tailwind link  -->
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
@@ -35,40 +37,53 @@
           
             <h3 class="font-bold">Memory</h3>
             <div class="mb-8 flex">
-            <p id="free-memory" class="p-2 border-2 rounded mr-1">8GB unified memory</p>
-            <p id="paid-memory" class="p-2 border-2 rounded mr-1">16GB unified memory</p>
+            <p id="free-memory" class="p-2 border-2 rounded mr-1 hover-item">8GB unified memory</p>
+            <p id="paid-memory" class="p-2 border-2 rounded mr-1 hover-item">16GB unified memory</p>
           </div>
           <!-- Storage input fild -->
           
             <h3 class="font-bold">Storage</h3>
             <div class="mb-8 flex">
-            <p id="free-ssd" class="p-2 border-2 rounded mr-1 ">254GB SSD Storage</p>
-            <p id="paid-ssd" class="p-2 border-2 rounded mr-1">512GB SSD Storage</p>
-            <p id="paid-1tb" class="p-2 border-2 rounded">1TB SSD Storage</p>
+            <p id="free-ssd" class="p-2 border-2 rounded mr-1 hover-item">254GB SSD Storage</p>
+            <p id="paid-ssd" class="p-2 border-2 rounded mr-1 hover-item">512GB SSD Storage</p>
+            <p id="paid-1tb" class="p-2 border-2 rounded hover-item">1TB SSD Storage</p>
           </div>
           <!-- delivary option fild -->
           
             <h3 class="font-bold">Choose Your delivary option</h3>
             <div class="mb-8 flex">
-            <p id="free-delivary" class="p-2 border-2 rounded mr-1">
+            <p id="free-delivary" class="p-2 border-2 rounded mr-1 hover-item">
               Friday, Aug 25 Free Prime Delivary
             </p>
-            <p id="paid-delivary" class="p-2 border-2 rounded">
+            <p id="paid-delivary" class="p-2 border-2 rounded hover-item">
               Friday, Aug 21 Delivary charg $20
             </p>
           </div>
 
           <!-- cost product option  -->
           <div>
-            <h3 class="font-medium">Best Price:$<span id="product-price">1299</span></h3>
-            <h3 class="font-medium">Extra Memory Cost: $<span id="const-memory">0</span></h3>
-            <h3 class="font-medium">Extra Storage Cost: $<span id="count-ssd">0</span></h3>
-            <h3 class="font-medium">Delivary Charge: $<span id="count-delivary">0</span></h3>
-            <hr />
-            <h3  class="font-medium">Total: $<span id="total-price">1299</span></h3>
+            <h3 class="font-medium">Best Price:
+              <span class="ml-36">$</span> <span id="product-price">1299</span>
+            </h3><hr>
+
+            <h3 class="font-medium">Extra Memory Cost:
+               <span class="ml-36">$</span><span id="const-memory">0</span>
+            </h3><hr>
+
+            <h3 class="font-medium">Extra Storage Cost: 
+              <span class="ml-36">$</span><span id="count-ssd">0</span>
+            </h3><hr>
+
+            <h3 class="font-medium">Delivary Charge:
+               <span class="ml-36">$</span><span id="count-delivary">0</span>
+            </h3><hr>
+            
+            <h3  class="font-medium">Total: 
+              <span class="ml-36">$</span><span id="total-price">1299</span>
+            </h3><hr>
             <!-- promo code  -->
-            <h3 class="font-normal mb-1">Add pomo code</h3>
-            <h3>discount: $<span id="total-discount">0</span></h3>
+            <h3 class="font-normal mb-1 text-3xl mt-4">Add pomo code</h3>
+            <h3>Promo code Discount (20%):  $<span id="total-discount">0</span></h3>
 
             <input id="discount-input" type="text" class="p-1 border-2 rounded" />
             <button id="apply-btn" class="bg-pink-500 text-white px-4 py-2 rounded">
