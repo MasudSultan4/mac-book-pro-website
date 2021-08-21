@@ -5,13 +5,13 @@ const countMemorey = document.getElementById('const-memory');
 // paid memory 
 document.getElementById('paid-memory').addEventListener('click',function(){
     countMemorey.innerText = '180'
-    updateTotal();
+    updateText();
 })
 
 // free memory 
 document.getElementById('free-memory').addEventListener('click',function(){
     countMemorey.innerText = '0'
-    updateTotal();
+    updateText();
 })
 
 // count ssd 1tb
@@ -20,19 +20,19 @@ const countSsd = document.getElementById('count-ssd')
 // free SSD 
 document.getElementById('free-ssd').addEventListener('click',function(){
     countSsd.innerText = '0';
-    updateTotal();
+    updateText();
 })
 
 // paid SSD 
 document.getElementById('paid-ssd').addEventListener('click',function(){
     countSsd.innerText = '100';
-    updateTotal();
+    updateText();
 })
 
 // paid 1tb 
 document.getElementById('paid-1tb').addEventListener('click',function(){
     countSsd.innerText = '180'
-    updateTotal();
+    updateText();
 })
 
 
@@ -41,12 +41,12 @@ const countDelivary = document.getElementById('count-delivary');
 
 document.getElementById('free-delivary').addEventListener('click',function(){
     countDelivary.innerText = '0';
-    updateTotal();
+    updateText();
 });
 
 document.getElementById('paid-delivary').addEventListener('click',function(){
     countDelivary.innerText = '20'
-    updateTotal();
+    updateText();
 })
 // product Price
 const productPrice = document.getElementById('product-price');
@@ -54,7 +54,7 @@ const productPrice = document.getElementById('product-price');
 const totalPrice = document.getElementById('total-price');
 
 // total Product coust 
-function updateTotal() {
+function updateText() {
     const macPrice = parseFloat(productPrice.innerText)
     const memory = parseFloat(countMemorey.innerText);
     const ssd = parseFloat(countSsd.innerText);
@@ -62,16 +62,26 @@ function updateTotal() {
 
     const grandTotal = macPrice + memory + ssd + delivary;
     totalPrice.innerText = grandTotal;
-    // soldOut()
+    soldOutPrice() 
+ 
 }
 
-// soldout-price 
+
+
 const soldoutPrice = document.getElementById('soldout-price');
+const discountInput = document.getElementById('discount-input')
 
 // soldOut Coust function 
-function soldOut() {
+function soldOutPrice() {
+    const macPrice = parseFloat(productPrice.innerText)
+    const memory = parseFloat(countMemorey.innerText);
+    const ssd = parseFloat(countSsd.innerText);
+    const delivary = parseFloat(countDelivary.innerText);
+
+    const grandTotal = macPrice + memory + ssd + delivary;
+    soldoutPrice.innerText = grandTotal;
+
  
-      
 }
 
 
